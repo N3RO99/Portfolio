@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar {
+    width: 100%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: #00e6e6; /* Neon color for links */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar nav ul li a:hover {
+    color: #ff00cc; /* Hover neon color */
+  }
+  
+  .brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00e6e6;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px 0;
+    background-color: #1e1e1e;
+    border: 2px solid #00e6e6; /* Neon border */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 230, 230, 0.3);
+  }
+  
+  .about-text {
+    width: 50%;
+    padding: 50px;
+    background: linear-gradient(135deg, #121212 60%, #1e1e1e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid #00e6e6; /* Border divider */
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    color: #00e6e6; /* Neon heading */
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #cccccc;
+  }
+  
+  .about-image {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #1e1e1e, #121212);
+  }
+  
+  .about-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: grayscale(20%);
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(120%);
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+    }
+    
+    .about-text, .about-image {
+      width: 100%;
+      border-right: none;
+    }
+  }
+  
