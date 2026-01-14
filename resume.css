@@ -50,7 +50,23 @@
     position: relative;
     color: #b0b0b0;
   }
-  
+  .section-card a {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #2a2a2a;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  }
+
+.section-card a:hover {
+  background: #3a3a3a;
+  }
+
+
   .section-card h2 {
     font-size: 1.5rem;
     color: #00ffcc;
