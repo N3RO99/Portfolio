@@ -289,7 +289,10 @@ footer p {
     transition: width 0.3s ease-in-out;
   }
   
-  .html { width: 90%; background-color: #e44d26; }
-  .css { width: 85%; background-color: #264de4; }
-  .javascript { width: 70%; background-color: #f7df1e; }
-  .python { width: 60%; background-color: #306998; }
+  .html { width: 100%; background-color: red; }
+  .css { width: 100%; background-color: blue; } 
+  .bootstrap { width: 100%; background-color: green; }
+  .javascript { width: 95%; background-color: pink; }
+  .react { width: 80%; background-color: purple; }
+  .python { width: 85%; background-color: orange; }
+  .java { width: 60%; background-color: navy; }
