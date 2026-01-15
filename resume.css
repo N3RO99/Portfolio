@@ -8,16 +8,19 @@
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    padding: 20px;
   }
   
   .resume-section {
     max-width: 800px;
     width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .resume-section > header{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ffcc;
   }
   
   header {
