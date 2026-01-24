@@ -1,298 +1,225 @@
+/* ===== RESET ===== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    transition: all 0.3s ease;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
 }
 
+/* ===== BODY ===== */
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #0c0c0c;
-    color: #e0e0e0;
-    scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+  background-color: #0c0c0c;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
 }
 
+/* ===== HERO ===== */
 header.hero {
-    background: url('background-video.mp4') center center/cover no-repeat; /* Use a video background */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+  background: url('background-video.mp4') center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
+/* DARK OVERLAY (FIXED) */
 header.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* 🔥 allows clicking */
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
-    font-size: 4em;
-    color: #00ffcc;
-    text-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+  font-size: 4em;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
 }
 
 .hero-content p {
-    font-size: 1.5em;
-    margin: 20px 0;
+  font-size: 1.5em;
+  margin: 20px 0;
 }
 
+/* ===== BUTTON ===== */
 .btn {
-    background-color: #ff3d00;
-    color: #101010;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(255, 61, 0, 0.5);
-    transition: all 0.3s ease;
+  display: inline-block;
+  background-color: #ff3d00;
+  color: #101010;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 61, 0, 0.5);
+  position: relative;
+  z-index: 3;
 }
 
 .btn:hover {
-    background-color: #ff8f00;
-    transform: translateY(-3px);
+  background-color: #ff8f00;
+  transform: translateY(-3px);
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12px 20px;
+  z-index: 1000;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
+  display: flex;
+  list-style: none;
+  justify-content: center;
 }
 
 .navbar ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .navbar ul li a {
-    color: #00ffcc;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
+  color: #00ffcc;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 .navbar ul li a:hover {
-    color: #ff3d00;
+  color: #ff3d00;
 }
 
+/* ===== SECTIONS ===== */
 section {
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 h2 {
-    margin-bottom: 30px;
-    font-size: 3em;
-    color: #ff3d00;
+  margin-bottom: 30px;
+  font-size: 3em;
+  color: #ff3d00;
 }
 
+/* ===== ABOUT ===== */
 .about {
-    background-color: #292929;
-    padding: 40px;
+  background-color: #292929;
+  padding: 40px;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+  background-color: #101010;
+  padding: 60px 20px;
+}
+
+.skills-section h2 {
+  color: #00ffcc;
+  font-size: 2.2rem;
 }
 
 .skills {
-    background-color: #101010;
-    padding: 40px;
-}
-
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  max-width: 600px;
+  margin: auto;
 }
 
 .skill {
-    width: 80%;
-    margin: 20px 0;
-    text-align: left;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
+.skill span {
+  font-size: 1.1rem;
+  color: #00ccff;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== PROGRESS BARS ===== */
 .progress-bar {
-    background: #444;
-    border-radius: 5px;
-    height: 25px;
-    overflow: hidden;
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.progress-fill {
-    height: 100%;
-    background: #00ffcc;
-    transition: width 1s ease;
+.progress {
+  height: 100%;
+  border-radius: 5px;
 }
 
+/* SKILL LEVELS */
+.html { width: 100%; background-color: red; }
+.css { width: 100%; background-color: blue; }
+.bootstrap { width: 100%; background-color: green; }
+.javascript { width: 95%; background-color: pink; }
+.react { width: 80%; background-color: purple; }
+.python { width: 85%; background-color: orange; }
+.java { width: 60%; background-color: navy; }
+
+/* ===== PROJECTS ===== */
 .projects {
-    background-color: #1c1c1c;
-    padding: 40px;
+  background-color: #1c1c1c;
+  padding: 40px;
 }
 
 .project-card {
-    background: rgba(255, 61, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px auto;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 15px rgba(255, 61, 0, 0.5);
-    cursor: pointer;
-    transition: transform 0.3s;
+  background: rgba(255, 61, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(255, 61, 0, 0.5);
+  cursor: pointer;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* ===== MODAL ===== */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: red;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.resume {
-    background: #292929;
-    padding: 40px;
-}
-
-.resume-details {
-    text-align: left;
-}
-
-.contact {
-    background-color: #101010;
-    padding: 40px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input,
-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #444;
-    border-radius: 5px;
-    background-color: #222;
-    color: #e0e0e0;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #ff3d00;
-    color: #101010;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #ff8f00;
-}
-
+/* ===== FOOTER ===== */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #292929;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #292929;
 }
 
 footer p {
-    color: #e0e0e0;
+  color: #e0e0e0;
 }
-.skills-section {
-    text-align: center;
-  }
-  
-  .skills-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #00ffcc;
-  }
-  
-  .skills {
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .skill {
-    margin-bottom: 1.5rem;
-  }
-  
-  .skill span {
-    font-size: 1.2rem;
-    color: #00ccff;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #333;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .progress {
-    height: 100%;
-    border-radius: 5px;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .html { width: 100%; background-color: red; }
-  .css { width: 100%; background-color: blue; } 
-  .bootstrap { width: 100%; background-color: green; }
-  .javascript { width: 95%; background-color: pink; }
-  .react { width: 80%; background-color: purple; }
-  .python { width: 85%; background-color: orange; }
-  .java { width: 60%; background-color: navy; }
