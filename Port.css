@@ -16,7 +16,7 @@ body {
 
 /* ===== HERO ===== */
 header.hero {
-  background: url('background-video.mp4') center center / cover no-repeat;
+  background: url('image1.jpg') center center / cover no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
