@@ -42,35 +42,38 @@
   header a {
     text-decoration: none;
   }
-  .navbar {
+ .navbar {
     width: 100%;
-    background: #111;
-    padding: 1rem 0;
-  }
-  .nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 20px;
+    background-color: #1e1e1e;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   }
-  .logo{
+  
+  .navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: #00e6e6; /* Neon color for links */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .navbar nav ul li a:hover {
+    color: #ff00cc; /* Hover neon color */
+  }
+  
+  .brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #00fff0;
-  }
-  
-  .nav-links{
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav-links a{
-    color: #00fff0;
-    text-decoration: none;
-    font-size: 1.1rem;
+    color: #00e6e6;
   }
   .section-card {
     background-color: #1e1e1e;
