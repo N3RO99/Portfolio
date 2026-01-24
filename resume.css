@@ -1,91 +1,121 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    min-height: 100vh;
-  }
-  
-  .resume-section {
-    max-width: 800px;
-    width: 100%;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  .resume-section > header{
-    text-align: center;
-    margin-bottom: 20px;
-    color: #00ffcc;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #00ffcc;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    text-shadow: 0px 0px 8px #fff;
-  }
-  
-  header p, header a {
-    font-size: 1rem;
-    color: #ffff;
-  }
-  
-  header a {
-    text-decoration: none;
-  }
- .navbar {
-    width: 100%;
-    padding: 20px;
-    background-color: #1e1e1e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .navbar nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
- 
-  .navbar nav ul li a {
-    text-decoration: none;
-    color: #00e6e6; /* Neon color for links */
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
 
-  .navbar nav ul li a:hover {
-    color: #ff00cc; /* Hover neon color */
-  }
-  
-  .brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #00e6e6;
-  }
-  .section-card {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    color: #b0b0b0;
-  }
-  .section-card a {
+/* ===== Layout ===== */
+.resume-section {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffcc;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 0px 0px 8px #fff;
+}
+
+header p,
+header a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  padding: 20px;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li {
+  padding-left: 0;
+}
+
+.navbar nav ul li::before {
+  content: none;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #00e6e6;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: #ff00cc;
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00e6e6;
+}
+
+/* ===== Cards ===== */
+.section-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  color: #b0b0b0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 255, 204, 0.3);
+}
+
+.section-card h2 {
+  font-size: 1.5rem;
+  color: #00ffcc;
+  text-shadow: 0px 0px 5px #00ffcc;
+  margin-bottom: 10px;
+}
+
+.section-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.section-card a {
   display: inline-block;
   padding: 8px 12px;
   background: #2a2a2a;
@@ -93,21 +123,39 @@
   text-decoration: none;
   border-radius: 6px;
   margin-top: 10px;
-  position: relative;
-  z-index: 1;
-  }
+}
 
 .section-card a:hover {
   background: #3a3a3a;
+}
+
+/* ===== Custom bullets ONLY for content lists ===== */
+.section-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section-card ul li {
+  position: relative;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+.section-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
 
+}
 
-  .section-card h2 {
-    font-size: 1.5rem;
-    color: #00ffcc;
-    text-shadow: 0px 0px 5px #00ffcc;
-    margin-bottom: 10px;
-  }
   
   .section-card h3 {
     font-size: 1.2rem;
@@ -142,7 +190,7 @@
     padding: 0;
   }
   
-  ul li {
+  ul h4 {
     font-size: 1rem;
     padding: 5px 0;
     color: #ffffff;
@@ -150,7 +198,7 @@
     padding-left: 20px;
   }
   
-  ul li::before {
+  ul h4::before {
     content: none;
     position: absolute;
     left: 0;
@@ -165,7 +213,7 @@
       gap: 1.2rem;
       font-size: 1rem;
     }
-    .logo{
+    .brand{
       font-size: 1.4rem;
     }
   }
