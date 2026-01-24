@@ -58,11 +58,6 @@
     gap: 20px;
   }
  
-  ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
   .navbar nav ul li a {
     text-decoration: none;
     color: #00e6e6; /* Neon color for links */
